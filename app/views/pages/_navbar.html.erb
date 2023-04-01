@@ -3,7 +3,12 @@
   <div style="height: 50px; width: 50px;">
     <%= image_tag "logo.png", class: "logo" %>
   </div>
-  <div>
-    <h1>Menu</h1>
+  <div class="d-flex">
+    <%= link_to messages_path, class:"link-to" do%>
+      <h3 class="me-3">My Messages</h3>
+    <% end %>
+    <%= link_to root_path, class:"link-to" do%>
+      <h3 class="me-3">Home</h3>
+    <% end %>
   </div>
 </div>

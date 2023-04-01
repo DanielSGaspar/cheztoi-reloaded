@@ -1,5 +1,5 @@
-<%= render "navbar"%>
 
+<%# Banner %>
 <div id="hp-banner" class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: black;">
   <div class="row container" style="height: 85%; width: 100%;">
     <div class="col-6 d-flex align-items-center" style="color: white; padding: 0 55px;">
@@ -14,11 +14,12 @@
         </div>
       </div>
     </div>
-    <div class="col-6" style="background-size: contain; background-repeat: no-repeat; background-position: center; background-image: url('https://res.cloudinary.com/dq9svotov/image/upload/v1680342259/cuca_profile_wjmcdx.jpg')">
+    <div class="col-6" style="background-size: contain; background-repeat: no-repeat; background-position: center; background-image: url('https://res.cloudinary.com/dq9svotov/image/upload/v1680371670/cuca_profile-fotor-bg-remover-20230401185417_dfoymt.png')">
     </div>
   </div>
 </div>
 
+<%# Offer %>
 <div id="offer" class="d-flex justify-content-center align-items-center" style="height: 350px; background-color: #E0C097;">
   <div class="row" style=>
     <div class="col-6 d-flex align-content-stretch" style="">
@@ -42,18 +43,22 @@
   </div>
 </div>
 
-<div id="testemonials" style="height: 450px; background-color: black; color: white;">
+<%# Testemonials %>
+<div class="d-flex align-items-center"id="testemonials" style="height: 450px; background-color: black; color: white;">
   <div class="container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
       <div class="carousel-inner">
-        <div class="carousel-item active testimonial-text" style="width: 75%; margin: auto 0;">
+        <div class="carousel-item active testimonial-text">
           <h2>Dis guy. If chadness was a person, Lucas would be it. And the size of his Distilled Vodka.</h2>
-          <em>Pebbles, New York</em>
+          <em>Jennifer Lawrence, New York</em>
         </div>
         <div class="carousel-item testimonial-text">
-          <h2>My dog used to be so lonely, but with TinDog's help they've found the love of their life. I think.</h2>
-          <img class="testimonial-image" src="images/lady-img.jpg" alt="golden retriever">
-          <em>Beverly, Illinois</em>
+          <h2>Absolutely rocked it! The one and only TOP GEE the world needed.</h2>
+          <em>Andrew Tate, Jail</em>
+        </div>
+        <div class="carousel-item testimonial-text">
+          <h2>Made me rethink the essence of my existance. Who am I? Who are you?</h2>
+          <em>Assnee, Zion</em>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -68,10 +73,58 @@
   </div>
 </div>
 
+<%# Profile %>
 <div style="height: 350px; background-color: #E0C097;">
+  <div class="row container" style="height: 85%; width: 100%;">
+    <div class="col-6" style="background-color: transparent; background-size: contain; background-repeat: no-repeat; background-position: center; background-image: url('https://res.cloudinary.com/dq9svotov/image/upload/v1680371562/cuca_2-fotor-bg-remover-20230401185136_uhq1nz.png')">
+    </div>
+    <div class="col-6 d-flex align-items-center" style="color: white; padding: 0 55px;">
+      <div>
+        <div>
+          <h2>
+            Need a stud for your next endeavor? Hire Lucas, the true Chad of the century!
+          </h2>
+        </div>
+        <div class="btn btn-primary">
+          <%= link_to "Contact Us", '#', class:"contact-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div style="height: 350px; background-color: black;">
+<%# Messaging %>
+<div style="background-color: black;">
+  <div class="container py-5" style="color: white;">
+    <%= simple_form_for @message do |f| %>
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :first_name %>
+        </div>
+        <div class="col-6">
+          <%= f.input :last_name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :date %>
+        </div>
+        <div class="col-6">
+          <%= f.input :guests %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :email_address %>
+        </div>
+        <div class="col-6">
+          <%= f.input :phone_number %>
+        </div>
+      </div>
+      <%= f.input :message %>
+      <%= f.button :submit, class:"btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
 
 
