@@ -1,2 +1,78 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "navbar"%>
+
+<div id="hp-banner" class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: black;">
+  <div class="row container" style="height: 85%; width: 100%;">
+    <div class="col-6 d-flex align-items-center" style="color: white; padding: 0 55px;">
+      <div>
+        <div>
+          <h2>
+            Need a stud for your next endeavor? Hire Lucas, the true Chad of the century!
+          </h2>
+        </div>
+        <div class="btn btn-primary">
+          <%= link_to "Contact Us", '#', class:"contact-btn" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6" style="background-size: contain; background-repeat: no-repeat; background-position: center; background-image: url('https://res.cloudinary.com/dq9svotov/image/upload/v1680342259/cuca_profile_wjmcdx.jpg')">
+    </div>
+  </div>
+</div>
+
+<div id="offer" class="d-flex justify-content-center align-items-center" style="height: 350px; background-color: #E0C097;">
+  <div class="row" style=>
+    <div class="col-6 d-flex align-content-stretch" style="">
+      <div class="shadow-sm p-4" style="width: 100%; background-color: #F3DEBA; border-radius: 24px;">
+        <h2>Amazing Gourmet Dinners</h2>
+        <p>The most amazing gourmet dinners served in the comfort of your home, for those special occasions</p>
+        <div class="btn btn-primary">
+          <%= link_to "Our Gourmet Menus", '#', class:"contact-btn" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 d-flex align-content-stretch" style="">
+      <div class="shadow-sm p-3" style="width: 100%; background-color: #F3DEBA; border-radius: 24px;">
+        <h2>Luscious Caterings</h2>
+        <p>We serve caterings based on your preferneces</p>
+        <div class="btn btn-primary">
+          <%= link_to "Our Catering Menus", '#', class:"contact-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="testemonials" style="height: 450px; background-color: black; color: white;">
+  <div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active testimonial-text" style="width: 75%; margin: auto 0;">
+          <h2>Dis guy. If chadness was a person, Lucas would be it. And the size of his Distilled Vodka.</h2>
+          <em>Pebbles, New York</em>
+        </div>
+        <div class="carousel-item testimonial-text">
+          <h2>My dog used to be so lonely, but with TinDog's help they've found the love of their life. I think.</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="golden retriever">
+          <em>Beverly, Illinois</em>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div style="height: 350px; background-color: #E0C097;">
+</div>
+
+<div style="height: 350px; background-color: black;">
+</div>
+
+
+<%= render "navbar"%>
