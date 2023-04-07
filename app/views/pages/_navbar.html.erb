@@ -1,8 +1,10 @@
 <%# Navbar %>
 <div class="d-flex justify-content-between my_navbar">
-  <div style="height: 50px; width: 50px;">
-    <%= image_tag "logo.png", class: "logo" %>
-  </div>
+  <%= link_to root_path do %>
+    <div style="height: 50px; width: 50px;">
+      <%= image_tag "logo.png", class: "logo" %>
+    </div>
+  <% end %>
   <div class="d-flex">
     <%= link_to messages_path, class:"link-to" do%>
       <h3 class="me-3">My Messages</h3>
